@@ -9,8 +9,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 typedef NS_ENUM(NSInteger,HTMLNodeType) {
     HTMLHrefNode,  /// 链接
     HTMLTextNode,  /// 文本
