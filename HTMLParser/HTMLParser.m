@@ -46,7 +46,6 @@ NSString * getAttributeNamed(xmlNode * node, const char * nameStr){
         if (strcmp((char*)attr->name, nameStr) == 0){
             for(xmlNode * child = attr->children; NULL != child; child = child->next){
                 return [NSString stringWithCString:(void*)child->content encoding:NSUTF8StringEncoding];
-                
             }
             break;
         }
@@ -107,7 +106,6 @@ NSString * getAttributeNamed(xmlNode * node, const char * nameStr){
 -(void)findChildTags:(NSString*)tagName inXMLNode:(xmlNode *)node inArray:(NSMutableArray*)array{
     xmlNode *cur_node = NULL;
     const char * tagNameStr =  [tagName UTF8String];
-    
     if (tagNameStr == nil)
         return;
     
