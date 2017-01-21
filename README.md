@@ -10,6 +10,10 @@ HTMLParser:一个简单的Html解析器`Reference StackOverflow`
 2. 点击`Bulid Phases`->`Link FrameWork and Libraries`,添加`libxml2.tbd`或`libxml2.dylib`
 3. 在项目设置中`Bulid Setting`->`header search paths`,添加`$(SDKROOT)/usr/include/libxml2`
 
+####Pod安装
+
+	pod 'SIHTMLParser', '~> 1.0'
+
 ###使用
 
 1. 导入头文件
