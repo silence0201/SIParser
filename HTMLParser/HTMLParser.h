@@ -8,7 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <libxml/HTMLparser.h>
+
 
 
 typedef NS_ENUM(NSInteger,HTMLNodeType) {
@@ -28,9 +28,6 @@ typedef NS_ENUM(NSInteger,HTMLNodeType) {
 };
 
 @interface HTMLNode : NSObject
-
-/// 通过xmlNode初始化
-- (instancetype)initWithXMLNode:(xmlNode *)xmlNode ;
 
 /// 通过类名寻找子节点
 - (HTMLNode *)findChildOfClass:(NSString *)className ;
