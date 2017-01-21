@@ -40,3 +40,6 @@ HTMLParser:一个简单的Html解析器`Reference StackOverflow`
 	```
 	
 4. 更多使用请查看头文件说明
+
+##HTMLParser
+HTMLParser is available under the MIT license. See the LICENSE file for more info.
