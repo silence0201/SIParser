@@ -10,7 +10,9 @@
 #import "HTMLParser.h"
 #import <libxml/HTMLtree.h>
 
-@implementation HTMLNode
+@implementation HTMLNode{
+    xmlNode *_node ;
+}
 
 - (HTMLNode*)parent{
     return [[HTMLNode alloc] initWithXMLNode:_node->parent];
@@ -120,7 +122,7 @@ NSString * getAttributeNamed(xmlNode * node, const char * nameStr){
 }
 
 
--(NSArray*)findChildTags:(NSString*)tagName{
+-(NSArray*)findChildrenTag:(NSString*)tagName{
     NSMutableArray * array = [NSMutableArray array];
     
     [self findChildTags:tagName inXMLNode:_node->children inArray:array];
@@ -327,7 +329,9 @@ NSString * rawContentsOfNode(xmlNode * node){
 
 @end
 
-@implementation HTMLParser
+@implementation HTMLParser{
+    htmlDocPtr _doc ;
+}
 
 -(HTMLNode*)doc{
     if (_doc == NULL)

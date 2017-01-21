@@ -24,7 +24,7 @@
     HTMLNode *body = [parser body] ;
     
     NSArray *array = [body findChildrenOfClass:@"cell item"] ;
-    NSArray *a = [array.firstObject findChildTags:@"a"] ;
+    NSArray *a = [array.firstObject findChildrenTag:@"a"] ;
     for (HTMLNode *node in a){
         NSLog(@"%@",[node contents]) ;
     }
