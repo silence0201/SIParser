@@ -368,7 +368,8 @@ NSString * rawContentsOfNode(xmlNode * node){
             int optionsHtml = HTML_PARSE_RECOVER;
             optionsHtml = optionsHtml | HTML_PARSE_NOERROR;
             optionsHtml = optionsHtml | HTML_PARSE_NOWARNING;
-            _doc = htmlReadDoc ((xmlChar*)[string UTF8String], NULL, enc, optionsHtml);
+            NSString *str = [self appendMetaCharset:string] ;
+            _doc = htmlReadDoc ((xmlChar*)[str UTF8String], NULL, enc, optionsHtml);
         }else{
             if (error) {
                 *error = [NSError errorWithDomain:@"HTMLParserdomain" code:1 userInfo:nil];
@@ -380,26 +381,8 @@ NSString * rawContentsOfNode(xmlNode * node){
 }
 
 -(instancetype)initWithData:(NSData*)data error:(NSError**)error{
-    if (self = [super init]){
-        _doc = NULL;
-        if (data){
-            CFStringEncoding cfenc = CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding);
-            CFStringRef cfencstr = CFStringConvertEncodingToIANACharSetName(cfenc);
-            const char *enc = CFStringGetCStringPtr(cfencstr, 0);
-            
-            _doc = htmlReadDoc((xmlChar*)[data bytes],
-                               "",
-                               enc,
-                               XML_PARSE_NOERROR | XML_PARSE_NOWARNING);
-        }else{
-            if (error){
-                *error = [NSError errorWithDomain:@"HTMLParserdomain" code:1 userInfo:nil];
-            }
-            
-        }
-    }
-    
-    return self;
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return [self initWithString:str error:error] ;
 }
 
 -(instancetype)initWithContentsOfURL:(NSURL*)url error:(NSError**)error{
@@ -411,6 +394,10 @@ NSString * rawContentsOfNode(xmlNode * node){
     return self;
 }
 
+- (NSString *)appendMetaCharset:(NSString *)str{
+    NSArray *strArray = [str componentsSeparatedByString:@"<head>"] ;
+    return [NSString stringWithFormat:@"%@ \n <meta charset=\"UTF-8\"> \n %@",strArray.firstObject,strArray.lastObject] ;
+}
 
 -(void)dealloc{
     if (_doc){
