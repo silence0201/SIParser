@@ -8,6 +8,20 @@
 
 #import "SIParser.h"
 
+NSString *const SIParserDomain = @"SIParserDomain";
+
 @implementation SIParser
+
+- (SINodeList *)nodeListWithString:(NSString *)inString filter:(id<SINodeFilter>)inFilter{
+    return nil;
+}
+
+@end
+
+@implementation SIParser (Error)
+
+- (NSError *)errorWithCode:(NSInteger)code UserInfo:(NSDictionary *)userInfo{
+    return [NSError errorWithDomain:SIParserDomain code:code userInfo:userInfo];
+}
 
 @end
