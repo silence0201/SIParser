@@ -45,6 +45,7 @@
 		E8A41E1B1F50664C00680E46 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		E8A41E1D1F50678700680E46 /* SIParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIParser.h; sourceTree = "<group>"; };
 		E8A41E1E1F50678700680E46 /* SIParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIParser.m; sourceTree = "<group>"; };
+		E8FE9F941F51B92200C37C19 /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +127,7 @@
 				E88ADBED1F51A4E8005ECACF /* XMLParser */,
 				E88ADBE91F5166C8005ECACF /* HTMLParser */,
 				E8A41E161F5065F200680E46 /* Common */,
+				E8FE9F941F51B92200C37C19 /* Parser.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

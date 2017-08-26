@@ -14,38 +14,42 @@ HTMLParser:一个简单的Html解析器`Reference StackOverflow`
 
 #### Pod安装
 
-	pod 'SIHTMLParser', '~> 1.0'
+	pod 'SIParser', '~> 0.1.0'
 
 ### 使用
 
 1. 导入头文件
 
 	```objective-c
-	#import "HTMLParser.h"
+	#import "Parser.h"
 	```
 	
 2. 初始化Parser
 
 	```objective-c
-    NSError *error = nil;
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"test" ofType:@"html"] ;
-    NSData *htmlData = [NSData dataWithContentsOfFile:path] ;
-    HTMLParser *parser = [[HTMLParser alloc] initWithData:htmlData error:&error] ;
+    NSString *htmlString = @"<username>我是username自定义样式</username><password size='20'>我是password自定义样式，注意属性内容</password>";
+    SIHTMLParser *htmlParser = [[SIHTMLParser alloc] init];
 	```
 	
 3. 查询节点信息
 
 	```objective-c
-	HTMLNode *body = [parser body] ;
-    
-    NSArray *array = [body findChildrenOfClass:@"cell item"] ;
-    NSArray *a = [array.firstObject findChildTags:@"a"] ;
-    for (HTMLNode *node in a){
-        NSLog(@"%@",[node contents]) ;
-    }
+	SINodeList *nodes = [htmlParser nodeListWithString:htmlString];
+	```
+	
+4. 转化为富文本
+
+	```objective-c
+	//自定义样式
+    NSDictionary *customStyles = @{
+                                   NSForegroundColorAttributeName: [UIColor orangeColor],
+                                   NSBackgroundColorAttributeName: [UIColor blueColor]
+                                   };
+    [htmlParser addStyle:customStyles forTag:@"username"];
+    NSAttributedString *attributedString = [htmlParser parseString:htmlString];
 	```
 	
 4. 更多使用请查看头文件说明
 
 ## HTMLParser
-HTMLParser is available under the MIT license. See the LICENSE file for more info.
+SIParser is available under the MIT license. See the LICENSE file for more info.

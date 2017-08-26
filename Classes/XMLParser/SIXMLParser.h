@@ -8,7 +8,6 @@
 
 #import "SIParser.h"
 
-
 @interface SIXMLParser : SIParser
 
 @end
