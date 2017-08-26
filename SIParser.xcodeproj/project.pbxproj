@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E88ADBEC1F5166EB005ECACF /* SIHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E88ADBEB1F5166EB005ECACF /* SIHTMLParser.m */; };
+		E88ADBF01F51A501005ECACF /* SIXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E88ADBEF1F51A501005ECACF /* SIXMLParser.m */; };
+		E88ADBF21F51A7D1005ECACF /* XmlTest.xml in Resources */ = {isa = PBXBuildFile; fileRef = E88ADBF11F51A7D1005ECACF /* XmlTest.xml */; };
+		E88ADBF81F51ACAD005ECACF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E88ADBF71F51ACAD005ECACF /* UIColor+Hex.m */; };
 		E8A41E001F50655F00680E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A41DFF1F50655F00680E46 /* main.m */; };
 		E8A41E031F50655F00680E46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A41E021F50655F00680E46 /* AppDelegate.m */; };
 		E8A41E061F50655F00680E46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A41E051F50655F00680E46 /* ViewController.m */; };
@@ -19,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E88ADBEA1F5166EB005ECACF /* SIHTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIHTMLParser.h; sourceTree = "<group>"; };
+		E88ADBEB1F5166EB005ECACF /* SIHTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIHTMLParser.m; sourceTree = "<group>"; };
+		E88ADBEE1F51A501005ECACF /* SIXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIXMLParser.h; sourceTree = "<group>"; };
+		E88ADBEF1F51A501005ECACF /* SIXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIXMLParser.m; sourceTree = "<group>"; };
+		E88ADBF11F51A7D1005ECACF /* XmlTest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = XmlTest.xml; sourceTree = "<group>"; };
+		E88ADBF61F51ACAD005ECACF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		E88ADBF71F51ACAD005ECACF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		E8A41DFB1F50655F00680E46 /* SIParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A41DFF1F50655F00680E46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E8A41E011F50655F00680E46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E88ADBE91F5166C8005ECACF /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				E88ADBEA1F5166EB005ECACF /* SIHTMLParser.h */,
+				E88ADBEB1F5166EB005ECACF /* SIHTMLParser.m */,
+			);
+			path = HTMLParser;
+			sourceTree = "<group>";
+		};
+		E88ADBED1F51A4E8005ECACF /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				E88ADBEE1F51A501005ECACF /* SIXMLParser.h */,
+				E88ADBEF1F51A501005ECACF /* SIXMLParser.m */,
+			);
+			path = XMLParser;
+			sourceTree = "<group>";
+		};
 		E8A41DF21F50655F00680E46 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +105,7 @@
 				E8A41E071F50655F00680E46 /* Main.storyboard */,
 				E8A41E0A1F50655F00680E46 /* Assets.xcassets */,
 				E8A41E0C1F50655F00680E46 /* LaunchScreen.storyboard */,
+				E88ADBF11F51A7D1005ECACF /* XmlTest.xml */,
 				E8A41E0F1F50655F00680E46 /* Info.plist */,
 				E8A41DFE1F50655F00680E46 /* Supporting Files */,
 			);
@@ -93,6 +123,8 @@
 		E8A41E151F5065DB00680E46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E88ADBED1F51A4E8005ECACF /* XMLParser */,
+				E88ADBE91F5166C8005ECACF /* HTMLParser */,
 				E8A41E161F5065F200680E46 /* Common */,
 			);
 			path = Classes;
@@ -105,6 +137,8 @@
 				E8A41E181F50661F00680E46 /* SINode.m */,
 				E8A41E1D1F50678700680E46 /* SIParser.h */,
 				E8A41E1E1F50678700680E46 /* SIParser.m */,
+				E88ADBF61F51ACAD005ECACF /* UIColor+Hex.h */,
+				E88ADBF71F51ACAD005ECACF /* UIColor+Hex.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -178,6 +212,7 @@
 				E8A41E0E1F50655F00680E46 /* LaunchScreen.storyboard in Resources */,
 				E8A41E0B1F50655F00680E46 /* Assets.xcassets in Resources */,
 				E8A41E091F50655F00680E46 /* Main.storyboard in Resources */,
+				E88ADBF21F51A7D1005ECACF /* XmlTest.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +226,10 @@
 				E8A41E061F50655F00680E46 /* ViewController.m in Sources */,
 				E8A41E191F50661F00680E46 /* SINode.m in Sources */,
 				E8A41E1F1F50678700680E46 /* SIParser.m in Sources */,
+				E88ADBEC1F5166EB005ECACF /* SIHTMLParser.m in Sources */,
 				E8A41E031F50655F00680E46 /* AppDelegate.m in Sources */,
+				E88ADBF81F51ACAD005ECACF /* UIColor+Hex.m in Sources */,
+				E88ADBF01F51A501005ECACF /* SIXMLParser.m in Sources */,
 				E8A41E001F50655F00680E46 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

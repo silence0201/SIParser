@@ -2,7 +2,7 @@
 //  SIParser.h
 //  SIParser
 //
-//  Created by 杨晴贺 on 2017/8/25.
+//  Created by Silence on 2017/8/25.
 //  Copyright © 2017年 Silence. All rights reserved.
 //
 
@@ -15,10 +15,21 @@
 #endif
 
 extern NSString *const SIParserDomain;
+typedef NSAttributedString *(^SINodeBlock)(SINode *node, NSDictionary *defaultStyles);
 
 @interface SIParser : NSObject
 
-- (SINodeList *)nodeListWithString:(NSString *)inString filter:(id<SINodeFilter>)inFilter;
+@property (nonatomic, strong, readonly) NSMutableDictionary *stylesMap;
+@property (nonatomic, strong, readonly) NSMutableDictionary *nodeBlocksMap;
+
+- (SINodeList *)nodeListWithString:(NSString *)inString;
+- (NSAttributedString *)parseString:(NSString *)inString;
+
+- (void)addStyle:(NSDictionary *)inStyle forTag:(NSString *)inTag;
+- (void)removeStyleForTag:(NSString *)inTag;
+
+- (void)addNodeBlock:(SINodeBlock)inNodeBlock forTag:(NSString *)inTag;
+- (void)removeNodeBlockForTag:(NSString *)inTag;
 
 @end
 

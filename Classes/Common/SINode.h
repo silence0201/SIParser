@@ -2,7 +2,7 @@
 //  SINode.h
 //  SIParser
 //
-//  Created by 杨晴贺 on 2017/8/25.
+//  Created by Silence on 2017/8/25.
 //  Copyright © 2017年 Silence. All rights reserved.
 //
 
@@ -11,13 +11,6 @@
 
 @class SINodeList;
 @class SINode;
-
-@protocol SINodeFilter <NSObject>
-
-- (BOOL)filter:(SINode* )inNode;
-
-@end
-
 @interface SINode : NSObject
 
 @property (nonatomic, assign) xmlNodePtr node;
@@ -26,7 +19,7 @@
 @property (nonatomic, strong) NSDictionary *attributes;
 
 - (instancetype)initWithXmlNode:(xmlNodePtr)inNode;
-- (void)filterWithNodeFilter:(id<SINodeFilter>)inNodeFilter nodeList:(SINodeList *)outNodeList;
+- (void)addAttributes:(NSDictionary *)inAttributes;
 
 @end
 

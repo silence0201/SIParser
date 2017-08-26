@@ -2,7 +2,7 @@
 //  SINode.m
 //  SIParser
 //
-//  Created by 杨晴贺 on 2017/8/25.
+//  Created by Silence on 2017/8/25.
 //  Copyright © 2017年 Silence. All rights reserved.
 //
 
@@ -17,11 +17,16 @@
     return self;
 }
 
-- (void)filterWithNodeFilter:(id<SINodeFilter>)inNodeFilter nodeList:(SINodeList *)outNodeList {
-    if ([inNodeFilter filter:self]) {
+- (void)addAttributes:(NSDictionary *)inAttributes{
+    if (inAttributes.count == 0) {
         return;
     }
-    [outNodeList addNode:self];
+    NSMutableDictionary *theAttributes = [NSMutableDictionary dictionary];
+    if (_attributes.count > 0) {
+        [theAttributes addEntriesFromDictionary:_attributes];
+    }
+    [theAttributes addEntriesFromDictionary:inAttributes];
+    _attributes = theAttributes;
 }
 
 @end
