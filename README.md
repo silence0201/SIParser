@@ -1,7 +1,7 @@
 # HTMLParser
 ![Language](https://img.shields.io/badge/language-objc-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)  
-HTMLParser:一个简单的Html解析器`Reference StackOverflow`
+SIParser:一个简单的Html/XML解析器
 
 ## 使用说明
 
