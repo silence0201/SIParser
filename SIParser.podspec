@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SIParser"
-  s.version      = "0.1.0"
+  s.version      = "1.2"
   s.summary      = "SIParser"
   s.description  = <<-DESC
                     An Objective-C wrapper to parse HTML/XML
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Silence" => "374619540@qq.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/silence0201/SIParser.git", :tag => "1.1" }
+  s.source       = { :git => "https://github.com/silence0201/SIParser.git", :tag => "1.2" }
   s.source_files  = "Classes", "Classes/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
   s.library   = "xml2"

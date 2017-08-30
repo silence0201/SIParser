@@ -184,7 +184,8 @@
 				TargetAttributes = {
 					E8A41DFA1F50655F00680E46 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = EB333MN775;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -355,11 +356,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 374619540@qq.com (96BV3AZ9GR)";
+				DEVELOPMENT_TEAM = EB333MN775;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SIParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silence.SIParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ce9f1863-f4f6-4985-9b7e-d371998a7bc7";
+				PROVISIONING_PROFILE_SPECIFIER = common_dev;
 			};
 			name = Debug;
 		};
@@ -368,11 +373,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 374619540@qq.com (96BV3AZ9GR)";
+				DEVELOPMENT_TEAM = EB333MN775;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SIParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silence.SIParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6ed0ff9e-adbb-4530-89c8-eb45bf18e493";
+				PROVISIONING_PROFILE_SPECIFIER = common_dis;
 			};
 			name = Release;
 		};

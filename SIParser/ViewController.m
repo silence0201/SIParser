@@ -22,8 +22,6 @@
     NSString *htmlString = @"<username>我是username自定义样式</username><password size='20'>我是password自定义样式，注意属性内容</password>";
     SIHTMLParser *htmlParser = [[SIHTMLParser alloc] init];
     
-    SINodeList *nodes = [htmlParser nodeListWithString:htmlString];
-    
     //自定义样式
     NSDictionary *customStyles = @{
                                    NSForegroundColorAttributeName: [UIColor orangeColor],
